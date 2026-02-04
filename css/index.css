@@ -23,7 +23,7 @@ body{
     Meiryo,
     sans-serif;
     text-align: center;
-    background-image: url(../img/xxxxxxxx.JPG);
+    /* background-image: url(../img/xxxxxxxx.JPG); */
     background-size: cover;
     overflow: hidden;
 }
@@ -112,6 +112,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity : 0;
 }
 
 .item02{
@@ -121,6 +122,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity : 0;
 }
 
 .item01 img, .item02 img{
@@ -137,6 +139,20 @@ a:hover{
 /*****************************/
 /* フッター                   */
 /*****************************/
+.fade-in{
+    animation: fadein 1.5s ease-out forwards;
+}
+@keyframes fadein{
+    0% {
+        opacity: 0;
+        transform: translate(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
 footer> p {
     position: absolute;/*←絶対位置*/
     bottom: 5px; /*下に固定*/
@@ -157,4 +173,11 @@ footer> p {
     body{
         background-size: auto 1000px;
     }
+}
+.back{
+    text-align: left;
+}
+#btn99{
+    padding: 0.5em;
+    
 }
